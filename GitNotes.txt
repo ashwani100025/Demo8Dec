@@ -42,6 +42,9 @@ From https://github.com/ashwani100025/newDemoRepo
  * branch            main       -> FETCH_HEAD
 Successfully rebased and updated refs/heads/main.
 
+Note##: This kind of errors usually occurs when the github repo name is different from our 
+local directory folder name. So Try to use the same name of folder as github repo.
+
 $ git push origin main
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
