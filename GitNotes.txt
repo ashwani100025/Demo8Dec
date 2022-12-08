@@ -1,3 +1,4 @@
+Git Global Configuration with GitHub Account
 git config --global user.name "Your_Name"
 git config --global user.email "email_address@domain.com"
 
