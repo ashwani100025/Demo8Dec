@@ -78,4 +78,6 @@ To https://github.com/ashwani100025/newDemoRepo.git
    c1dd320..72404c1  main -> main
 
 
-new 8 dec
+Change "master" brnach name to "main"
+=====================================
+$ git branch -M main
