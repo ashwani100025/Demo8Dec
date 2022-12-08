@@ -1,0 +1,77 @@
+git config --global user.name "Your_Name"
+git config --global user.email "email_address@domain.com"
+
+Cloning a github repository to local
+====================================
+
+$ git clone https://github.com/ashwani100025/iNeuronBigDataAssignments.git
+
+After that open that cloned Directory named "iNeuronBigDataAssignments" with Visual Studio code terminal and further use it for new file adding etc.
+
+
+To push files from local to git repo
+====================================
+
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+$ git init
+Initialized empty Git repository in /home/ashok/Documents/Ashwani/iNeuron Big Data Course/newDemo7Dec/.git/
+
+$ git add .
+
+$ git commit -m "first commit"
+[main (root-commit) 2422234] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test7Dec.py
+
+$ git remote add origin https://github.com/ashwani100025/newDemoRepo.git
+
+$ git push origin main
+
+IF ERROR:
+To https://github.com/ashwani100025/newDemoRepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/ashwani100025/newDemoRepo.git'
+
+THEN DO THIS:
+
+$ git pull --rebase origin main
+From https://github.com/ashwani100025/newDemoRepo
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ashwani100025/newDemoRepo.git
+   989e785..c1dd320  main -> main
+
+To add new file just created in the same repo
+==============================================
+$ touch testfile2.py		#to create new file
+
+$ git add .
+
+$ git commit -m "second file add"
+[main 72404c1] second file add
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 testfile2.py
+
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 270 bytes | 270.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ashwani100025/newDemoRepo.git
+   c1dd320..72404c1  main -> main
+
+
+new 8 dec
